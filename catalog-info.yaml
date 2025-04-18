@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: hsh5tpzul-python-gitops
+  description: This is GitOps manifest for hsh5tpzul-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=hsh5tpzul-python
+    backstage.io/kubernetes-id: hsh5tpzul-python 
+    backstage.io/techdocs-ref: dir:. 
+    github.com/project-slug: sjm-rhtap/hsh5tpzul-python-gitops
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:hsh5tpzul-python
